@@ -37,12 +37,31 @@ class GeneralWebscraper:
 
         return self.driver.find_elements_by_class_name("gtm-product")
 
+    def scrapeLargerProductPic(self, url):
+        self.driver.get(url)
+        productImageElement = self.driver.find_elements_by_xpath("//div[contains(@class, 'medias-slider__media') and contains(@class, 'lazyOwl')]")[0]
+        productImageElementUrl = productImageElement.get_attribute("data-zoom-image")
+        self.driver.back()
+        return productImageElementUrl
+    
+    def scrapeLargerProductPics(self,url):
+        products = self.loadCategoryPage(url)
+        productPageUrls = []
+        productImageUrls = []
+        for product in products:
+            productPageUrls.append(product.find_elements_by_class_name("product-card__thumb")[0].get_attribute("href"))
+        for i in range(len(products)):
+            productImageUrls.append(self.scrapeLargerProductPic(productPageUrls[i]))
+        return productImageUrls
+
     def scrapeCategoryPage(self, url):
+        productImagesUrls = self.scrapeLargerProductPics(url)
         products = self.loadCategoryPage(url)
         splitUrl = url.split("/")
         category=splitUrl[6].replace("-", " ")
         subCategory=splitUrl[7].replace("-", " ")
-        for product in products:
+        for i,product in enumerate(products):
+            productPageUrl = productImagesUrls[i]
             formId = product.find_element_by_id("addToCartForm")
             sku = product.get_attribute("data-sku")
             inStock = formId.find_elements_by_id("addToCartButton-"+sku) !=[]
@@ -54,7 +73,7 @@ class GeneralWebscraper:
                 "Sale": formId.get_attribute("data-product-discount"),
                 'Sale Price': formId.get_attribute("data-product-price"),
                 'Unit': formId.get_attribute("data-unit-size"),
-                'Image Link': formId.get_attribute("data-product-image"),
+                'Image Link': productPageUrl, #formId.get_attribute("data-product-image"),
                 'Description': "",
                 'Product Page Link': product.find_elements_by_tag_name("a")[0].get_attribute("href"),
                 'Category': category,
