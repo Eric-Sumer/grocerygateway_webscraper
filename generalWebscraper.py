@@ -14,7 +14,7 @@ class GeneralWebscraper:
         self.options.add_argument("--test-type")
         self.driver = webdriver.Chrome(executable_path="./chromedriver",options=self.options)
 
-        self.fieldNames = ['SKU', 'Product Name', 'Category', 'Subcategory', 'In Stock', 'Price', 'Sale', 'Sale Price', 'Unit', 'Image Link', 'Description', 'Product Page Link']
+        self.fieldNames = ['SKU', 'UPC', 'Product Name', 'Category', 'Subcategory', 'In Stock', 'Price', 'Sale', 'Sale Price', 'Unit', 'Image Link', 'Description', 'Product Page Link']
         self.products = []
 
     
@@ -37,36 +37,44 @@ class GeneralWebscraper:
 
         return self.driver.find_elements_by_class_name("gtm-product")
 
-    def scrapeLargerProductPic(self, url):
+    def scrapeProductPage(self, url):
         self.driver.get(url)
+        #get product image
         productImageElement = self.driver.find_elements_by_xpath("//div[contains(@class, 'medias-slider__media') and contains(@class, 'lazyOwl')]")[0]
         productImageElementUrl = productImageElement.get_attribute("data-zoom-image")
+        #get UPC
+        upc = self.driver.find_elements_by_class_name("about-sku-section")[0].text.split(" ")[-1]
+        #get product description
+        productDescriptionAttribute = self.driver.find_elements_by_xpath("//div[contains(@class, 'description') and contains(@class, 'light') and contains(@class, 'col-md-10')]")[0]
+        productDescriptionAttributeChildren = productDescriptionAttribute.find_elements_by_tag_name("p")
+        description = " ".join([att.text for att in productDescriptionAttributeChildren])
         self.driver.back()
-        return productImageElementUrl
+        return [productImageElementUrl,upc,description]
     
-    def scrapeLargerProductPics(self,url):
+    def scrapeProductPageInformation(self,url):
         products = self.loadCategoryPage(url)
         productPageUrls = []
         productImageUrls = []
         for product in products:
             productPageUrls.append(product.find_elements_by_class_name("product-card__thumb")[0].get_attribute("href"))
         for i in range(len(products)):
-            productImageUrls.append(self.scrapeLargerProductPic(productPageUrls[i]))
+            productImageUrls.append(self.scrapeProductPage(productPageUrls[i]))
         return productImageUrls
 
     def scrapeCategoryPage(self, url):
-        productImagesUrls = self.scrapeLargerProductPics(url)
+        productPageInfo = self.scrapeProductPageInformation(url)
         products = self.loadCategoryPage(url)
         splitUrl = url.split("/")
         category=splitUrl[6].replace("-", " ")
         subCategory=splitUrl[7].replace("-", " ")
         for i,product in enumerate(products):
-            productPageUrl = productImagesUrls[i]
+            productPageUrl,upc,description = productPageInfo[i]
             formId = product.find_element_by_id("addToCartForm")
             sku = product.get_attribute("data-sku")
             inStock = formId.find_elements_by_id("addToCartButton-"+sku) !=[]
             self.products.append({
                 'SKU': sku,
+                'UPC': upc,
                 'Product Name': formId.get_attribute("data-product-name"),
                 'In Stock': str(inStock),
                 'Price': formId.get_attribute("data-product-regular-price"),
@@ -74,10 +82,10 @@ class GeneralWebscraper:
                 'Sale Price': formId.get_attribute("data-product-price"),
                 'Unit': formId.get_attribute("data-unit-size"),
                 'Image Link': productPageUrl, #formId.get_attribute("data-product-image"),
-                'Description': "",
+                'Description': description,
                 'Product Page Link': product.find_elements_by_tag_name("a")[0].get_attribute("href"),
                 'Category': category,
-                'Subcategory': subCategory
+                'Subcategory': subCategory,
             })
         
     def writeCSV(self):
@@ -87,9 +95,6 @@ class GeneralWebscraper:
             writer.writeheader()
             for productDict in self.products:
                 writer.writerow(productDict)
-
-
-
 
 if __name__ == "__main__":
     csvFileName = "productList.csv"
@@ -102,7 +107,3 @@ if __name__ == "__main__":
         webScraper.scrapeCategoryPage(url)
 
     webScraper.writeCSV()
-
-
-
-    
