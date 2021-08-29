@@ -39,17 +39,20 @@ class GeneralWebscraper:
 
     def scrapeProductPage(self, url):
         self.driver.get(url)
-        #get product image
-        productImageElement = self.driver.find_elements_by_xpath("//div[contains(@class, 'medias-slider__media') and contains(@class, 'lazyOwl')]")[0]
-        productImageElementUrl = productImageElement.get_attribute("data-zoom-image")
         #get UPC
         upc = self.driver.find_elements_by_class_name("about-sku-section")[0].text.split(" ")[-1]
         #get product description
         productDescriptionAttribute = self.driver.find_elements_by_xpath("//div[contains(@class, 'description') and contains(@class, 'light') and contains(@class, 'col-md-10')]")[0]
         productDescriptionAttributeChildren = productDescriptionAttribute.find_elements_by_tag_name("p")
         description = " ".join([att.text for att in productDescriptionAttributeChildren])
-        self.driver.back()
-        return [productImageElementUrl,upc,description]
+        try: 
+            #get product image
+            productImageElement = self.driver.find_elements_by_xpath("//div[contains(@class, 'medias-slider__media') and contains(@class, 'lazyOwl')]")[0]
+            productImageElementUrl = productImageElement.get_attribute("data-zoom-image")
+            self.driver.back()
+            return [productImageElementUrl,upc,description]
+        except:
+            return ["no image url", upc, description]
     
     def scrapeProductPageInformation(self,url):
         products = self.loadCategoryPage(url)
@@ -102,8 +105,11 @@ if __name__ == "__main__":
     lines = []
     with open('webscrapePages.txt') as f:
         lines = f.readlines()
-    
+    cnt = 0
     for url in lines:
+        cnt+=1
+        if cnt < 3:
+            continue
         webScraper.scrapeCategoryPage(url)
 
     webScraper.writeCSV()
