@@ -65,32 +65,37 @@ class GeneralWebscraper:
         return productImageUrls
 
     def scrapeCategoryPage(self, url):
-        productPageInfo = self.scrapeProductPageInformation(url)
-        products = self.loadCategoryPage(url)
-        splitUrl = url.split("/")
-        category=splitUrl[6].replace("-", " ")
-        subCategory=splitUrl[7].replace("-", " ")
-        for i,product in enumerate(products):
-            productPageUrl,upc,description = productPageInfo[i]
-            formId = product.find_element_by_id("addToCartForm")
-            sku = product.get_attribute("data-sku")
-            inStock = formId.find_elements_by_id("addToCartButton-"+sku) !=[]
-            self.products.append({
-                'SKU': sku,
-                'UPC': upc,
-                'Product Name': formId.get_attribute("data-product-name"),
-                'In Stock': str(inStock),
-                'Price': formId.get_attribute("data-product-regular-price"),
-                "Sale": formId.get_attribute("data-product-discount"),
-                'Sale Price': formId.get_attribute("data-product-price"),
-                'Unit': formId.get_attribute("data-unit-size"),
-                'Image Link': productPageUrl, #formId.get_attribute("data-product-image"),
-                'Description': description,
-                'Product Page Link': product.find_elements_by_tag_name("a")[0].get_attribute("href"),
-                'Category': category,
-                'Subcategory': subCategory,
-            })
-        
+        try: 
+            productPageInfo = self.scrapeProductPageInformation(url)
+            products = self.loadCategoryPage(url)
+            splitUrl = url.split("/")
+            category=splitUrl[6].replace("-", " ")
+            subCategory=splitUrl[7].replace("-", " ")
+            for i,product in enumerate(products):
+                productPageUrl,upc,description = productPageInfo[i]
+                formId = product.find_element_by_id("addToCartForm")
+                sku = product.get_attribute("data-sku")
+                inStock = formId.find_elements_by_id("addToCartButton-"+sku) !=[]
+                self.products.append({
+                    'SKU': sku,
+                    'UPC': upc,
+                    'Product Name': formId.get_attribute("data-product-name"),
+                    'In Stock': str(inStock),
+                    'Price': formId.get_attribute("data-product-regular-price"),
+                    "Sale": formId.get_attribute("data-product-discount"),
+                    'Sale Price': formId.get_attribute("data-product-price"),
+                    'Unit': formId.get_attribute("data-unit-size"),
+                    'Image Link': productPageUrl, #formId.get_attribute("data-product-image"),
+                    'Description': description,
+                    'Product Page Link': product.find_elements_by_tag_name("a")[0].get_attribute("href"),
+                    'Category': category,
+                    'Subcategory': subCategory,
+                })
+        except Exception as e:
+            print("An error occurred when processing this url")
+            print("The error is: ", e)
+            print("All, some, or none of the products from this category may be copied")
+            
     def writeCSV(self):
         with open(self.csvFileName, mode='w') as csv_file:
             writer = csv.DictWriter(csv_file, fieldnames=self.fieldNames)
@@ -107,8 +112,9 @@ if __name__ == "__main__":
         lines = f.readlines()
     cnt = 0
     for url in lines:
+        print("Processing", url)
         cnt+=1
-        if cnt < 3:
+        if cnt < 10:
             continue
         webScraper.scrapeCategoryPage(url)
 
