@@ -77,19 +77,19 @@ class GeneralWebscraper:
                 sku = product.get_attribute("data-sku")
                 inStock = formId.find_elements_by_id("addToCartButton-"+sku) !=[]
                 self.products.append({
-                    'SKU': sku,
-                    'UPC': upc,
-                    'Product Name': formId.get_attribute("data-product-name"),
+                    'SKU': sku,  #
+                    'UPC': upc, #
+                    'Product Name': formId.get_attribute("data-product-name"), #
                     'In Stock': str(inStock),
-                    'Price': formId.get_attribute("data-product-regular-price"),
-                    "Sale": formId.get_attribute("data-product-discount"),
-                    'Sale Price': formId.get_attribute("data-product-price"),
-                    'Unit': formId.get_attribute("data-unit-size"),
+                    'Price': formId.get_attribute("data-product-regular-price"), #
+                    "Sale": formId.get_attribute("data-product-discount"), #
+                    'Sale Price': formId.get_attribute("data-product-price"), #
+                    'Unit': formId.get_attribute("data-unit-size"), #
                     'Image Link': productPageUrl, #formId.get_attribute("data-product-image"),
-                    'Description': description,
-                    'Product Page Link': product.find_elements_by_tag_name("a")[0].get_attribute("href"),
-                    'Category': category,
-                    'Subcategory': subCategory,
+                    'Description': description, #
+                    'Product Page Link': product.find_elements_by_tag_name("a")[0].get_attribute("href"), #
+                    'Category': category, #
+                    'Subcategory': subCategory, #
                 })
         except Exception as e:
             print("An error occurred when processing this url")
