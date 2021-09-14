@@ -38,7 +38,7 @@ def categoryURLWebscraper(url, textDoc):
         for j in range(1,len(subMenuElements)):
 
             print(parentCategoryTitle)
-            menuElementLinks.append(",".join([parentCategoryTitle,processString(subMenuElements[j].text),subMenuElements[j].get_attribute('href')]))
+            menuElementLinks.append("|||".join([parentCategoryTitle,processString(subMenuElements[j].text),subMenuElements[j].get_attribute('href')]))
 
     with open (textDoc, 'w') as f:
         for line in menuElementLinks:

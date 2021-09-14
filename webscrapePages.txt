@@ -1,126 +1,126 @@
-Fresh Fruits & Vegetables,Fruits,https://www.longos.com/Fruits/c/701-6072
-Fresh Fruits & Vegetables,Fresh Vegetables,https://www.longos.com/Fresh-Vegetables/c/701-6085
-Fresh Fruits & Vegetables,Packaged Salads,https://www.longos.com/Packaged-Salads/c/701-6081
-Fresh Fruits & Vegetables,Herbs,https://www.longos.com/Herbs/c/701-6074
-Fresh Fruits & Vegetables,Juices,https://www.longos.com/Juices/c/701-6076
-Fresh Fruits & Vegetables,Fresh Cut, Riced & Spiral Vegetables,https://www.longos.com/Fresh-Cut-Riced-or-Spiral-Vegetables/c/701-6085-5005
-Fresh Fruits & Vegetables,Nuts, Seeds & Dried Fruits,https://www.longos.com/Nuts-Seeds-and-Dried-Fruits/c/701-6114
-Fresh Meat & Seafood,Chicken & Turkey,https://www.longos.com/Chicken-and-Turkey/c/705-6069
-Fresh Meat & Seafood,Beef & Veal,https://www.longos.com/Beef-and-Veal/c/705-6068
-Fresh Meat & Seafood,Pork,https://www.longos.com/Pork/c/705-6083
-Fresh Meat & Seafood,Fish & Seafood,https://www.longos.com/Fish-and-Seafood/c/705-6061
-Fresh Meat & Seafood,Meat Alternatives,https://www.longos.com/Meat-Alternatives/c/705-6067
-Fresh Meat & Seafood,Game Meats & Fowl,https://www.longos.com/Game-Meats-and-Fowl/c/705-6073
-Fresh Meat & Seafood,Frozen Boxed Meats,https://www.longos.com/Frozen-Boxed-Meats/c/705-6086-5326
-Fresh Meat & Seafood,Lamb,https://www.longos.com/Lamb/c/705-6077
-Fresh Meat & Seafood,Frozen Meat & Chicken,https://www.longos.com/Frozen-Meat-and-Chicken/c/705-6086-5325
-Fresh Meat & Seafood,Frozen Meats & Seafood,https://www.longos.com/Frozen-Meats-and-Seafood/c/705-6086
-Fresh Meat & Seafood,Sausages & Hot Dogs,https://www.longos.com/Sausages-and-Hot-Dogs/c/705-6129
-Deli,Deli Cheese,https://www.longos.com/Deli-Cheese/c/702-6042
-Deli,Deli Meats,https://www.longos.com/Deli-Meats/c/702-6043
-Deli,Antipastos, Dips & Spreads,https://www.longos.com/Antipastos-Dips-and-Spreads/c/702-6003
-Bakery,Fresh In-house Baked Breads,https://www.longos.com/Fresh-In-House-Baked-Breads/c/704-6164
-Bakery,Packaged Breads,https://www.longos.com/Packaged-Breads/c/704-6118
-Bakery,Wraps, Pita & Flat Breads,https://www.longos.com/Wraps-Pita-and-Flat-Breads/c/704-6162
-Bakery,Bread Crumbs & Stuffing,https://www.longos.com/Bread-Crumbs-and-Stuffing/c/704-6016
-Bakery,Breakfast, Muffins & Scones,https://www.longos.com/Breakfast-Muffins-and-Scones/c/704-6018
-Bakery,Desserts & Pastries,https://www.longos.com/Desserts-and-Pastries/c/704-6045
-Prepared Foods,Entrees & Soups,https://www.longos.com/Entrees-and-Soups/c/703-6011
-Prepared Foods,Fresh Sushi & Meal Kits,https://www.longos.com/Fresh-Sushi-and-Meal-Kits/c/703-6084
-Prepared Foods,Fresh Pizza, Pasta & Sauces,https://www.longos.com/Fresh-Pizza-Pasta-and-Sauces/c/703-6082
-Prepared Foods,Meat Pies & Quiches,https://www.longos.com/Meat-Pies-and-Quiches/c/703-6107
-Prepared Foods,Pasta, Noodles & Rice,https://www.longos.com/Pasta-Noodles-and-Rice/c/703-6122
-Prepared Foods,Prepared Vegetables & Sides,https://www.longos.com/Prepared-Vegetables-and-Sides/c/703-6128
-Prepared Foods,Sandwiches & Burritos,https://www.longos.com/Sandwiches-and-Burritos/c/703-6133
-Prepared Foods,Platters & Catering Trays,https://www.longos.com/Platters-and-Catering-Trays/c/703-6126
-Pantry,Canned & Jarred,https://www.longos.com/Canned-and-Jarred/c/712-6021
-Pantry,Condiments & Sauces,https://www.longos.com/Condiments-and-Sauces/c/712-6035
-Pantry,Cereal, Spreads & Syrup,https://www.longos.com/Cereal-Spreads-and-Syrup/c/712-6025
-Pantry,Oils, Vinegars & Cooking Wine,https://www.longos.com/Oils-Vinegars-and-Cooking-Wine/c/712-6116
-Pantry,Baking Supplies,https://www.longos.com/Baking-Supplies/c/712-6064
-Pantry,Cookies & Crackers,https://www.longos.com/Cookies-and-Crackers/c/712-6037
-Pantry,Pasta, Rice & Beans,https://www.longos.com/Pasta-Rice-and-Beans/c/712-6123
-Pantry,Spices & Seasonings,https://www.longos.com/Gravy-Spices-and-Seasonings/c/712-6146
-Pantry,Mexican,https://www.longos.com/Mexican/c/712-6166
-Snacks & Candy,Chips, Pretzels & Popcorn,https://www.longos.com/Chips-Pretzels-and-Popcorn/c/711-6028
-Snacks & Candy,Candy & Chocolate,https://www.longos.com/Candy-and-Chocolate/c/711-6020
-Snacks & Candy,Fruit & Vegetable Snacks,https://www.longos.com/Fruit-and-Vegetable-Snacks/c/711-6087
-Snacks & Candy,Energy & Granola Bars,https://www.longos.com/Energy-and-Granola-Bars/c/711-6054
-Snacks & Candy,Jerky, Trail & Snack Mixes,https://www.longos.com/Jerky-Trail-and-Snack-Mixes/c/711-6097
-Snacks & Candy,Mints & Gum,https://www.longos.com/Mints-and-Gum/c/711-6109
-Snacks & Candy,Gelatin Snacks,https://www.longos.com/Gelatin-Snacks/c/711-6131-3
-Snacks & Candy,Pudding & Gelatin Snacks,https://www.longos.com/Pudding-Fruit-Cups-and-Gelatin/c/711-6131
-Snacks & Candy,Pudding & Custards,https://www.longos.com/Pudding-and-Custards/c/711-6131-1
-Snacks & Candy,Rice Cakes,https://www.longos.com/Rice-Cakes/c/711-6132
-Snacks & Candy,Apple Sauce & Fruit,https://www.longos.com/Apple-Sauce-and-Fruit/c/711-6131-2
-Snacks & Candy,Snack Cakes,https://www.longos.com/Snack-Cakes/c/711-6139
-Dairy & Eggs,Eggs & Egg Substitutes,https://www.longos.com/Eggs-and-Egg-substitutes/c/706-6053
-Dairy & Eggs,Butter & Margarine,https://www.longos.com/Butter-and-Margarine/c/706-6019
-Dairy & Eggs,Milk,https://www.longos.com/Milk/c/706-6108
-Dairy & Eggs,Cream & Coffee Creamer,https://www.longos.com/Cream-and-Coffee-Creamer/c/706-6040
-Dairy & Eggs,Packaged Cheese,https://www.longos.com/Packaged-Cheese/c/706-6119
-Dairy & Eggs,Yogurt & Cottage Cheese,https://www.longos.com/Yogurt-and-Cottage-Cheese/c/706-6163
-Dairy & Eggs,Non-dairy Alternatives,https://www.longos.com/Non-Dairy-Alternatives/c/706-6113
-Dairy & Eggs,Chilled Desserts & Doughs,https://www.longos.com/Chilled-Desserts-and-Doughs/c/706-6027
-Dairy & Eggs,Salad Dressings, Sour Creams & Dips,https://www.longos.com/Salad-Dressings-Sour-Creams-and-Dips/c/706-6145
-Dairy & Eggs,Smoked Fish, Canned,https://www.longos.com/Smoked-Fish-Canned/c/706-6138
-Frozen,Ice Cream & Treats,https://www.longos.com/Ice-Cream-and-Treats/c/708-6094
-Frozen,Dinners & Entrees,https://www.longos.com/Dinners-and-Entrees/c/708-6048
-Frozen,Pizza, Pasta & Perogies,https://www.longos.com/Pizza-Pasta-and-Perogies/c/708-6124
-Frozen,Bakery & Fruit,https://www.longos.com/Bakery-and-Fruit/c/708-6007
-Frozen,Vegetables,https://www.longos.com/Vegetables/c/708-6085
-Frozen,Appetizers & Snacks,https://www.longos.com/Appetizers-and-Snacks/c/708-6004
-Frozen,Breakfast Foods,https://www.longos.com/Breakfast-Foods/c/708-6017
-Frozen,Frozen Meats & Seafood,https://www.longos.com/Frozen-Meats-and-Seafood/c/708-6086
-Frozen,Game Time,https://www.longos.com/Game-Time/c/708-9999
-Frozen,Juice & Ice,https://www.longos.com/Juice-and-Ice/c/708-6099
-Drinks,Water,https://www.longos.com/Water/c/707-6159
-Drinks,Soft Drinks,https://www.longos.com/Soft-Drinks/c/707-6142
-Drinks,Coffee,https://www.longos.com/Coffee/c/707-6032
-Drinks,Tea & Hot Drinks,https://www.longos.com/Tea-and-Hot-Drinks/c/707-6151
-Drinks,Sports & Energy Drinks,https://www.longos.com/Sports-and-Energy-Drinks/c/707-6148
-Drinks,Drink Mixes,https://www.longos.com/Drink-Mixes/c/707-6052
-Drinks,Juice,https://www.longos.com/Juice/c/707-6098
-Alcohol,Wine,https://www.longos.com/Wine/c/714-6160
-Alcohol,Liquor & Spirits,https://www.longos.com/Liquor-and-Spirits/c/714-6104
-Alcohol,Beer,https://www.longos.com/Beer/c/714-6012
-Alcohol,Cocktail Mixes,https://www.longos.com/Cocktail-Mixes/c/714-6031
-Alcohol,Non-alcoholic Drinks,https://www.longos.com/Non-alcoholic-drinks/c/714-6112
-Household,Air Fresheners & Candles,https://www.longos.com/Air-Fresheners-/c/717-6002
-Household,Bathroom Tissue,https://www.longos.com/Bathroom-Tissue/c/717-6009
-Household,Backpacks & Lunch Bags,https://www.longos.com/Backpacks-and-Lunch-Bags/c/717-6006
-Household,Plates, Bowls, Cups & Flatware,https://www.longos.com/Plates-Bowls-Cups-and-Flatware/c/717-6125
-Household,Trash Bags & Liners,https://www.longos.com/Trash-Bags-and-Liners/c/717-6154
-Household,Lightbulbs & Batteries,https://www.longos.com/Lightbulbs-and-Batteries/c/717-6103
-Household,Kitchen Supplies,https://www.longos.com/Kitchen-Supplies/c/717-6100
-Household,Dish Detergent,https://www.longos.com/Dish-Detergent/c/717-6049
-Household,Cleaning Products,https://www.longos.com/Cleaning-Products/c/717-6030
-Household,Paper, Pens, Supplies & Bags,https://www.longos.com/Paper-Pens-Supplies-and-Bags/c/717-6091
-Household,Paper Towels & Wipes,https://www.longos.com/Paper-Towels-and-Wipes/c/717-6121
-Household,Facial Tissue & Napkins,https://www.longos.com/Facial-Tissue-and-Napkins/c/717-6111
-Laundry Care,Laundry Detergent,https://www.longos.com/Laundry-Detergent/c/713-6102
-Laundry Care,Fabric Softener & Dryer Sheets,https://www.longos.com/Fabric-Softener-and-Drier-Sheets/c/713-6057
-Laundry Care,Bleach & Stain Removal,https://www.longos.com/Bleach-and-Stain-Removal/c/713-6014
-,Formula, Baby & Toddler Food,https://www.longos.com/Formula-Baby-and-Toddler-Food/c/709-6066
-,Diapers, Trainers & Wipes,https://www.longos.com/Diapers-Trainers-and-Wipes/c/709-6046
-,Bath & Skin Care,https://www.longos.com/Bath-and-Skin-Care/c/709-6008
-,Cat Litter,https://www.longos.com/
-,Pet Food, Treats & Toys,https://www.longos.com/Pet-Food-Treats-and-Toys/c/716-6023
-,Protein & Meal Replacements,https://www.longos.com/Protein-and-Meal-Replacements/c/715-6130
-,Adult Incontinence,https://www.longos.com/Health-and-Beauty/Incontinence/c/715-6059
-,Feminine Care,https://www.longos.com/Health-and-Beauty/Feminine-Care/c/715-6062
-,Deodorant & Anti-perspirants,https://www.longos.com/Deodorant-and-Anti-perspirants/c/715-6044
-,Eye & Ear Care,https://www.longos.com/Eye-and-Ear-Care/c/715-6056
-,Cold, Flu & Allergy,https://www.longos.com/Cold-Flu-and-Allergy/c/715-6034
-,Digestion,https://www.longos.com/Digestion/c/715-6047
-,First Aid,https://www.longos.com/First-Aid/c/715-6060
-,Condoms & Personal Lubricants,https://www.longos.com/Condoms-and-Personal-Lubricants/c/715-6036
-,Oral Hygiene,https://www.longos.com/Oral-Hygiene/c/715-6117
-,Muscles, Joints & Pain Relief,https://www.longos.com/Muscles-Joints-and-Pain-Relief/c/715-6110
-,Makeup, Hair & Skin Care,https://www.longos.com/Makeup-Hair-and-Skin-Care/c/715-6137
-,Shaving & Grooming,https://www.longos.com/Shaving-and-Grooming/c/715-6135
-,Soap,https://www.longos.com/Soap/c/715-6141
-,Vitamins & Supplements,https://www.longos.com/Vitamins-and-Supplements/c/715-6158
-,Fresh Flowers,https://www.longos.com/Fresh-Flowers/c/718-001
-,Greeting Cards,https://www.longos.com/Greeting-Cards-and-Gift-Bags/Greeting-Cards/c/716-6091-5568
-,Christmas Trees & Decor,https://www.longos.com/Christmas-Trees-and-Decor/c/718-003
+Fresh Fruits & Vegetables|||Fruits|||https://www.longos.com/Fruits/c/701-6072
+Fresh Fruits & Vegetables|||Fresh Vegetables|||https://www.longos.com/Fresh-Vegetables/c/701-6085
+Fresh Fruits & Vegetables|||Packaged Salads|||https://www.longos.com/Packaged-Salads/c/701-6081
+Fresh Fruits & Vegetables|||Herbs|||https://www.longos.com/Herbs/c/701-6074
+Fresh Fruits & Vegetables|||Juices|||https://www.longos.com/Juices/c/701-6076
+Fresh Fruits & Vegetables|||Fresh Cut, Riced & Spiral Vegetables|||https://www.longos.com/Fresh-Cut-Riced-or-Spiral-Vegetables/c/701-6085-5005
+Fresh Fruits & Vegetables|||Nuts, Seeds & Dried Fruits|||https://www.longos.com/Nuts-Seeds-and-Dried-Fruits/c/701-6114
+Fresh Meat & Seafood|||Chicken & Turkey|||https://www.longos.com/Chicken-and-Turkey/c/705-6069
+Fresh Meat & Seafood|||Beef & Veal|||https://www.longos.com/Beef-and-Veal/c/705-6068
+Fresh Meat & Seafood|||Pork|||https://www.longos.com/Pork/c/705-6083
+Fresh Meat & Seafood|||Fish & Seafood|||https://www.longos.com/Fish-and-Seafood/c/705-6061
+Fresh Meat & Seafood|||Meat Alternatives|||https://www.longos.com/Meat-Alternatives/c/705-6067
+Fresh Meat & Seafood|||Game Meats & Fowl|||https://www.longos.com/Game-Meats-and-Fowl/c/705-6073
+Fresh Meat & Seafood|||Frozen Boxed Meats|||https://www.longos.com/Frozen-Boxed-Meats/c/705-6086-5326
+Fresh Meat & Seafood|||Lamb|||https://www.longos.com/Lamb/c/705-6077
+Fresh Meat & Seafood|||Frozen Meat & Chicken|||https://www.longos.com/Frozen-Meat-and-Chicken/c/705-6086-5325
+Fresh Meat & Seafood|||Frozen Meats & Seafood|||https://www.longos.com/Frozen-Meats-and-Seafood/c/705-6086
+Fresh Meat & Seafood|||Sausages & Hot Dogs|||https://www.longos.com/Sausages-and-Hot-Dogs/c/705-6129
+Deli|||Deli Cheese|||https://www.longos.com/Deli-Cheese/c/702-6042
+Deli|||Deli Meats|||https://www.longos.com/Deli-Meats/c/702-6043
+Deli|||Antipastos, Dips & Spreads|||https://www.longos.com/Antipastos-Dips-and-Spreads/c/702-6003
+Bakery|||Fresh In-house Baked Breads|||https://www.longos.com/Fresh-In-House-Baked-Breads/c/704-6164
+Bakery|||Packaged Breads|||https://www.longos.com/Packaged-Breads/c/704-6118
+Bakery|||Wraps, Pita & Flat Breads|||https://www.longos.com/Wraps-Pita-and-Flat-Breads/c/704-6162
+Bakery|||Bread Crumbs & Stuffing|||https://www.longos.com/Bread-Crumbs-and-Stuffing/c/704-6016
+Bakery|||Breakfast, Muffins & Scones|||https://www.longos.com/Breakfast-Muffins-and-Scones/c/704-6018
+Bakery|||Desserts & Pastries|||https://www.longos.com/Desserts-and-Pastries/c/704-6045
+Prepared Foods|||Entrees & Soups|||https://www.longos.com/Entrees-and-Soups/c/703-6011
+Prepared Foods|||Fresh Sushi & Meal Kits|||https://www.longos.com/Fresh-Sushi-and-Meal-Kits/c/703-6084
+Prepared Foods|||Fresh Pizza, Pasta & Sauces|||https://www.longos.com/Fresh-Pizza-Pasta-and-Sauces/c/703-6082
+Prepared Foods|||Meat Pies & Quiches|||https://www.longos.com/Meat-Pies-and-Quiches/c/703-6107
+Prepared Foods|||Pasta, Noodles & Rice|||https://www.longos.com/Pasta-Noodles-and-Rice/c/703-6122
+Prepared Foods|||Prepared Vegetables & Sides|||https://www.longos.com/Prepared-Vegetables-and-Sides/c/703-6128
+Prepared Foods|||Sandwiches & Burritos|||https://www.longos.com/Sandwiches-and-Burritos/c/703-6133
+Prepared Foods|||Platters & Catering Trays|||https://www.longos.com/Platters-and-Catering-Trays/c/703-6126
+Pantry|||Canned & Jarred|||https://www.longos.com/Canned-and-Jarred/c/712-6021
+Pantry|||Condiments & Sauces|||https://www.longos.com/Condiments-and-Sauces/c/712-6035
+Pantry|||Cereal, Spreads & Syrup|||https://www.longos.com/Cereal-Spreads-and-Syrup/c/712-6025
+Pantry|||Oils, Vinegars & Cooking Wine|||https://www.longos.com/Oils-Vinegars-and-Cooking-Wine/c/712-6116
+Pantry|||Baking Supplies|||https://www.longos.com/Baking-Supplies/c/712-6064
+Pantry|||Cookies & Crackers|||https://www.longos.com/Cookies-and-Crackers/c/712-6037
+Pantry|||Pasta, Rice & Beans|||https://www.longos.com/Pasta-Rice-and-Beans/c/712-6123
+Pantry|||Spices & Seasonings|||https://www.longos.com/Gravy-Spices-and-Seasonings/c/712-6146
+Pantry|||Mexican|||https://www.longos.com/Mexican/c/712-6166
+Snacks & Candy|||Chips, Pretzels & Popcorn|||https://www.longos.com/Chips-Pretzels-and-Popcorn/c/711-6028
+Snacks & Candy|||Candy & Chocolate|||https://www.longos.com/Candy-and-Chocolate/c/711-6020
+Snacks & Candy|||Fruit & Vegetable Snacks|||https://www.longos.com/Fruit-and-Vegetable-Snacks/c/711-6087
+Snacks & Candy|||Energy & Granola Bars|||https://www.longos.com/Energy-and-Granola-Bars/c/711-6054
+Snacks & Candy|||Jerky, Trail & Snack Mixes|||https://www.longos.com/Jerky-Trail-and-Snack-Mixes/c/711-6097
+Snacks & Candy|||Mints & Gum|||https://www.longos.com/Mints-and-Gum/c/711-6109
+Snacks & Candy|||Gelatin Snacks|||https://www.longos.com/Gelatin-Snacks/c/711-6131-3
+Snacks & Candy|||Pudding & Gelatin Snacks|||https://www.longos.com/Pudding-Fruit-Cups-and-Gelatin/c/711-6131
+Snacks & Candy|||Pudding & Custards|||https://www.longos.com/Pudding-and-Custards/c/711-6131-1
+Snacks & Candy|||Rice Cakes|||https://www.longos.com/Rice-Cakes/c/711-6132
+Snacks & Candy|||Apple Sauce & Fruit|||https://www.longos.com/Apple-Sauce-and-Fruit/c/711-6131-2
+Snacks & Candy|||Snack Cakes|||https://www.longos.com/Snack-Cakes/c/711-6139
+Dairy & Eggs|||Eggs & Egg Substitutes|||https://www.longos.com/Eggs-and-Egg-substitutes/c/706-6053
+Dairy & Eggs|||Butter & Margarine|||https://www.longos.com/Butter-and-Margarine/c/706-6019
+Dairy & Eggs|||Milk|||https://www.longos.com/Milk/c/706-6108
+Dairy & Eggs|||Cream & Coffee Creamer|||https://www.longos.com/Cream-and-Coffee-Creamer/c/706-6040
+Dairy & Eggs|||Packaged Cheese|||https://www.longos.com/Packaged-Cheese/c/706-6119
+Dairy & Eggs|||Yogurt & Cottage Cheese|||https://www.longos.com/Yogurt-and-Cottage-Cheese/c/706-6163
+Dairy & Eggs|||Non-dairy Alternatives|||https://www.longos.com/Non-Dairy-Alternatives/c/706-6113
+Dairy & Eggs|||Chilled Desserts & Doughs|||https://www.longos.com/Chilled-Desserts-and-Doughs/c/706-6027
+Dairy & Eggs|||Salad Dressings, Sour Creams & Dips|||https://www.longos.com/Salad-Dressings-Sour-Creams-and-Dips/c/706-6145
+Dairy & Eggs|||Smoked Fish, Canned|||https://www.longos.com/Smoked-Fish-Canned/c/706-6138
+Frozen|||Ice Cream & Treats|||https://www.longos.com/Ice-Cream-and-Treats/c/708-6094
+Frozen|||Dinners & Entrees|||https://www.longos.com/Dinners-and-Entrees/c/708-6048
+Frozen|||Pizza, Pasta & Perogies|||https://www.longos.com/Pizza-Pasta-and-Perogies/c/708-6124
+Frozen|||Bakery & Fruit|||https://www.longos.com/Bakery-and-Fruit/c/708-6007
+Frozen|||Vegetables|||https://www.longos.com/Vegetables/c/708-6085
+Frozen|||Appetizers & Snacks|||https://www.longos.com/Appetizers-and-Snacks/c/708-6004
+Frozen|||Breakfast Foods|||https://www.longos.com/Breakfast-Foods/c/708-6017
+Frozen|||Frozen Meats & Seafood|||https://www.longos.com/Frozen-Meats-and-Seafood/c/708-6086
+Frozen|||Game Time|||https://www.longos.com/Game-Time/c/708-9999
+Frozen|||Juice & Ice|||https://www.longos.com/Juice-and-Ice/c/708-6099
+Drinks|||Water|||https://www.longos.com/Water/c/707-6159
+Drinks|||Soft Drinks|||https://www.longos.com/Soft-Drinks/c/707-6142
+Drinks|||Coffee|||https://www.longos.com/Coffee/c/707-6032
+Drinks|||Tea & Hot Drinks|||https://www.longos.com/Tea-and-Hot-Drinks/c/707-6151
+Drinks|||Sports & Energy Drinks|||https://www.longos.com/Sports-and-Energy-Drinks/c/707-6148
+Drinks|||Drink Mixes|||https://www.longos.com/Drink-Mixes/c/707-6052
+Drinks|||Juice|||https://www.longos.com/Juice/c/707-6098
+Alcohol|||Wine|||https://www.longos.com/Wine/c/714-6160
+Alcohol|||Liquor & Spirits|||https://www.longos.com/Liquor-and-Spirits/c/714-6104
+Alcohol|||Beer|||https://www.longos.com/Beer/c/714-6012
+Alcohol|||Cocktail Mixes|||https://www.longos.com/Cocktail-Mixes/c/714-6031
+Alcohol|||Non-alcoholic Drinks|||https://www.longos.com/Non-alcoholic-drinks/c/714-6112
+Household|||Air Fresheners & Candles|||https://www.longos.com/Air-Fresheners-/c/717-6002
+Household|||Bathroom Tissue|||https://www.longos.com/Bathroom-Tissue/c/717-6009
+Household|||Backpacks & Lunch Bags|||https://www.longos.com/Backpacks-and-Lunch-Bags/c/717-6006
+Household|||Plates, Bowls, Cups & Flatware|||https://www.longos.com/Plates-Bowls-Cups-and-Flatware/c/717-6125
+Household|||Trash Bags & Liners|||https://www.longos.com/Trash-Bags-and-Liners/c/717-6154
+Household|||Lightbulbs & Batteries|||https://www.longos.com/Lightbulbs-and-Batteries/c/717-6103
+Household|||Kitchen Supplies|||https://www.longos.com/Kitchen-Supplies/c/717-6100
+Household|||Dish Detergent|||https://www.longos.com/Dish-Detergent/c/717-6049
+Household|||Cleaning Products|||https://www.longos.com/Cleaning-Products/c/717-6030
+Household|||Paper, Pens, Supplies & Bags|||https://www.longos.com/Paper-Pens-Supplies-and-Bags/c/717-6091
+Household|||Paper Towels & Wipes|||https://www.longos.com/Paper-Towels-and-Wipes/c/717-6121
+Household|||Facial Tissue & Napkins|||https://www.longos.com/Facial-Tissue-and-Napkins/c/717-6111
+Laundry Care|||Laundry Detergent|||https://www.longos.com/Laundry-Detergent/c/713-6102
+Laundry Care|||Fabric Softener & Dryer Sheets|||https://www.longos.com/Fabric-Softener-and-Drier-Sheets/c/713-6057
+Laundry Care|||Bleach & Stain Removal|||https://www.longos.com/Bleach-and-Stain-Removal/c/713-6014
+Baby|||Formula, Baby & Toddler Food|||https://www.longos.com/Formula-Baby-and-Toddler-Food/c/709-6066
+Baby|||Diapers, Trainers & Wipes|||https://www.longos.com/Diapers-Trainers-and-Wipes/c/709-6046
+Baby|||Bath & Skin Care|||https://www.longos.com/Bath-and-Skin-Care/c/709-6008
+Pet|||Cat Litter|||https://www.longos.com/
+Pet|||Pet Food, Treats & Toys|||https://www.longos.com/Pet-Food-Treats-and-Toys/c/716-6023
+Health & Beauty|||Protein & Meal Replacements|||https://www.longos.com/Protein-and-Meal-Replacements/c/715-6130
+Health & Beauty|||Adult Incontinence|||https://www.longos.com/Health-and-Beauty/Incontinence/c/715-6059
+Health & Beauty|||Feminine Care|||https://www.longos.com/Health-and-Beauty/Feminine-Care/c/715-6062
+Health & Beauty|||Deodorant & Anti-perspirants|||https://www.longos.com/Deodorant-and-Anti-perspirants/c/715-6044
+Health & Beauty|||Eye & Ear Care|||https://www.longos.com/Eye-and-Ear-Care/c/715-6056
+Health & Beauty|||Cold, Flu & Allergy|||https://www.longos.com/Cold-Flu-and-Allergy/c/715-6034
+Health & Beauty|||Digestion|||https://www.longos.com/Digestion/c/715-6047
+Health & Beauty|||First Aid|||https://www.longos.com/First-Aid/c/715-6060
+Health & Beauty|||Condoms & Personal Lubricants|||https://www.longos.com/Condoms-and-Personal-Lubricants/c/715-6036
+Health & Beauty|||Oral Hygiene|||https://www.longos.com/Oral-Hygiene/c/715-6117
+Health & Beauty|||Muscles, Joints & Pain Relief|||https://www.longos.com/Muscles-Joints-and-Pain-Relief/c/715-6110
+Health & Beauty|||Makeup, Hair & Skin Care|||https://www.longos.com/Makeup-Hair-and-Skin-Care/c/715-6137
+Health & Beauty|||Shaving & Grooming|||https://www.longos.com/Shaving-and-Grooming/c/715-6135
+Health & Beauty|||Soap|||https://www.longos.com/Soap/c/715-6141
+Health & Beauty|||Vitamins & Supplements|||https://www.longos.com/Vitamins-and-Supplements/c/715-6158
+Flowers & Cards|||Fresh Flowers|||https://www.longos.com/Fresh-Flowers/c/718-001
+Flowers & Cards|||Greeting Cards|||https://www.longos.com/Greeting-Cards-and-Gift-Bags/Greeting-Cards/c/716-6091-5568
+Flowers & Cards|||Christmas Trees & Decor|||https://www.longos.com/Christmas-Trees-and-Decor/c/718-003

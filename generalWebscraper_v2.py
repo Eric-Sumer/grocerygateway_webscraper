@@ -21,34 +21,45 @@ class GeneralWebscraper:
 
     def loadCategoryPage(self, url):
         #function loads the category page into the correct place and gets the list of product box elements
-        self.driver.get(url)
-
         try:
+            self.driver.get(url)
             element_present = EC.presence_of_element_located((By.XPATH, "//div[@class='d-flex d-xl-none filters-items-counter']"))
             WebDriverWait(self.driver, self.timeout).until(element_present)
         except TimeoutException:
             print ("Timed out waiting for page to load")
+            return []
+        try: 
+            #get product boxes
+            prodPerRefresh = 24
+            showing_of_string_arr = self.driver.find_element_by_xpath("//div[@class='d-flex d-xl-none filters-items-counter']").text.split(" ")
+            totalProds = int(showing_of_string_arr[3])
+            numPresses = math.ceil(max(0,totalProds-prodPerRefresh)/prodPerRefresh)
+            for _ in range(numPresses):
+                loadMoreBtn = self.driver.find_element_by_xpath("//button[@class='btn-black']")
+                self.driver.execute_script("arguments[0].click()", loadMoreBtn)
+                time.sleep(1)
+            parentBoxes = self.driver.find_elements_by_xpath("//div[@class='product-list-item_img-holder text-center']")
+            return [parentBox.find_element_by_tag_name("a").get_attribute("href") for parentBox in parentBoxes]
+        except Exception as e:
+            print("Error occured for category at url", url)
+            print("Error is ", e)
+            print("Continuing Run")
+            return []
+            
 
-        #get product boxes
-        prodPerRefresh = 24
-        showing_of_string_arr = self.driver.find_element_by_xpath("//div[@class='d-flex d-xl-none filters-items-counter']").text.split(" ")
-        totalProds = int(showing_of_string_arr[3])
-        numPresses = math.ceil(max(0,totalProds-prodPerRefresh)/prodPerRefresh)
-        for _ in range(numPresses):
-            loadMoreBtn = self.driver.find_element_by_xpath("//button[@class='btn-black']")
-            self.driver.execute_script("arguments[0].click()", loadMoreBtn)
-            time.sleep(1)
-        parentBoxes = self.driver.find_elements_by_xpath("//div[@class='product-list-item_img-holder text-center']")
-        return [parentBox.find_element_by_tag_name("a").get_attribute("href") for parentBox in parentBoxes]
-    
     def scrapeProductPage(self,url, category, parentCategory):
-        self.driver.get(url)
-
         try:
+            self.driver.get(url)
             element_present = EC.presence_of_element_located((By.XPATH, "//img[@class='ng-tns-c404-0']"))
             WebDriverWait(self.driver, self.timeout).until(element_present)
         except TimeoutException:
             print ("Timed out waiting for page to load")
+            return {}
+        except Exception as e:
+            print("Error occured for category at url", url)
+            print("Error is ", e)
+            print("Continuing Run")
+            return {}
             
         try : 
             productPageLink = url
@@ -97,12 +108,14 @@ class GeneralWebscraper:
             print("Error occured for ", url)
             print("Error is ", e)
             print("Continuing Run")
+            return {}
         
-    def scapeCategoryPage(self, parentCat, subCat, url):
+    def scrapeCategoryPage(self, parentCat, subCat, url):
         productPageLinks = self.loadCategoryPage(url)
         for productPageLink in productPageLinks:
+            if type(productPageLink)!=str: continue
             listEle = self.scrapeProductPage(productPageLink, subCat, parentCat)
-            if listEle != {}: self.products.append(listEle)
+            if listEle != {} : self.products.append(listEle)
         self.writeCSV()
 
     def writeCSV(self):
@@ -123,7 +136,10 @@ if __name__ == "__main__":
         lines = f.readlines()
     cnt = 0
     for line in lines:
-        parentCat,subCat,url = line.split(",")
+        parentCat,subCat,url = line.split("|||")
         print("Processing", url)
-        webScraper.scapeCategoryPage(parentCat,subCat,url)
+        cnt+=1
+
+        if cnt < 8: continue
+        webScraper.scrapeCategoryPage(parentCat,subCat,url)
     webScraper.writeCSV()
