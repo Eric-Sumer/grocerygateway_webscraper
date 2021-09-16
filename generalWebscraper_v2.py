@@ -17,6 +17,7 @@ class GeneralWebscraper:
         self.timeout = 10
         self.fieldNames = ['UPC', 'Product Name', 'Category', 'Subcategory', 'In Stock', 'Price', 'Sale', 'Sale Price', 'Unit', 'Image Link', 'Description', 'Product Page Link']
         self.products = []
+        self.csvPath = './CsvFiles/'
 
 
     def loadCategoryPage(self, url):
@@ -38,6 +39,7 @@ class GeneralWebscraper:
                 loadMoreBtn = self.driver.find_element_by_xpath("//button[@class='btn-black']")
                 self.driver.execute_script("arguments[0].click()", loadMoreBtn)
                 time.sleep(1)
+            time.sleep(5)
             parentBoxes = self.driver.find_elements_by_xpath("//div[@class='product-list-item_img-holder text-center']")
             return [parentBox.find_element_by_tag_name("a").get_attribute("href") for parentBox in parentBoxes]
         except Exception as e:
@@ -52,43 +54,44 @@ class GeneralWebscraper:
             self.driver.get(url)
             element_present = EC.presence_of_element_located((By.XPATH, "//img[@class='ng-tns-c404-0']"))
             WebDriverWait(self.driver, self.timeout).until(element_present)
-        except TimeoutException:
-            print ("Timed out waiting for page to load")
-            return {}
         except Exception as e:
-            print("Error occured for category at url", url)
+            print("Error occured when getting product page url", url)
             print("Error is ", e)
             print("Continuing Run")
             return {}
             
         try : 
             productPageLink = url
-            title = self.driver.find_element_by_xpath("//img[@class='ng-tns-c404-0']").get_attribute("alt")
-            upc = self.driver.find_element_by_xpath("//p[@class='product-code ng-star-inserted']").text #
-            imageUrl = self.driver.find_element_by_xpath("//img[@class='ng-tns-c404-0']").get_attribute("src")
-            unit = self.driver.find_element_by_xpath("//span[@class='measurement']").text.strip()[1:]
+            title = self.driver.find_element_by_xpath("//img[@class='ng-tns-c404-0']").get_attribute("alt").strip()
+            upc = self.driver.find_element_by_xpath("//p[@class='product-code ng-star-inserted']").get_attribute("textContent").split(":")[-1].strip()
+
+            imageUrl = self.driver.find_element_by_xpath("//img[@class='ng-tns-c404-0']").get_attribute("src").strip()
+            unit = self.driver.find_element_by_xpath("//span[@class='measurement']").get_attribute("textContent")[1:].strip()
 
             #get product description
             prodDescriptionDropDownElement = self.driver.find_element_by_css_selector("[title*='Product information']")
             prodDescriptionTextElements = prodDescriptionDropDownElement.find_elements_by_xpath("//div[@class='ng-star-inserted']")
-            description = " ".join([prodDesc.text for prodDesc in prodDescriptionTextElements if prodDesc.text!=""])
+            description = " ".join([prodDesc.get_attribute("textContent") for prodDesc in prodDescriptionTextElements if prodDesc.get_attribute("textContent")!=""])
+            #clean description
+            description = description.replace("\n", " ").strip()
+
 
             #determine if out of stock
-            inStock = self.driver.find_element_by_xpath("//button[@class='gg-btn primary']").text.lower()!="out of stock"
+            inStock = self.driver.find_element_by_xpath("//button[@class='gg-btn primary']").get_attribute("textContent").lower().strip()!="out of stock"
 
             #get price and sale
             saleElement = self.driver.find_elements_by_xpath("//p[@class='price actual with-discount ng-star-inserted']")
             if saleElement:
                 sale = "True"
-                originalPrice = self.driver.find_element_by_xpath("//p[@class='price regular ng-star-inserted']").text.strip()[1:]  
-                salePrice = saleElement[0].find_element_by_xpath("//span[@class='font-weight-bold']").text[1:]+"."+\
-                    saleElement[0].find_element_by_xpath("//span[@class='cents font-weight-bold']").text
+                originalPrice = self.driver.find_element_by_xpath("//p[@class='price regular ng-star-inserted']").get_attribute("textContent").strip()[1:]  
+                salePrice = saleElement[0].find_element_by_xpath("//span[@class='font-weight-bold']").get_attribute("textContent")[1:]+"."+\
+                    saleElement[0].find_element_by_xpath("//span[@class='cents font-weight-bold']").get_attribute("textContent")
             else:
                 sale = "False"
                 salePrice = "0"
                 priceElement = self.driver.find_element_by_xpath("//p[@class='price actual ng-star-inserted']")
-                originalPrice = priceElement.find_element_by_xpath("//span[@class='font-weight-bold']").text[1:]+"."+\
-                    priceElement.find_element_by_xpath("//span[@class='cents font-weight-bold']").text
+                originalPrice = priceElement.find_element_by_xpath("//span[@class='font-weight-bold']").get_attribute("textContent")[1:]+"."+\
+                    priceElement.find_element_by_xpath("//span[@class='cents font-weight-bold']").get_attribute("textContent")
 
             return {
                 'UPC':upc,
@@ -105,7 +108,7 @@ class GeneralWebscraper:
                 "Subcategory": category
             }
         except Exception as e:
-            print("Error occured for ", url)
+            print("Error occured for processing product page @", url)
             print("Error is ", e)
             print("Continuing Run")
             return {}
@@ -116,17 +119,17 @@ class GeneralWebscraper:
             if type(productPageLink)!=str: continue
             listEle = self.scrapeProductPage(productPageLink, subCat, parentCat)
             if listEle != {} : self.products.append(listEle)
-        self.writeCSV()
+        self.writeCSV(parentCat,subCat)
 
-    def writeCSV(self):
-        with open(self.csvFileName, mode='w') as csv_file:
-            writer = csv.DictWriter(csv_file, fieldnames=self.fieldNames)
-
-            writer.writeheader()
+    def writeCSV(self, parentCat, subCat):
+        fileName = (self.csvPath+parentCat+"_"+subCat+".csv").replace(" ", "_")
+        with open(fileName, 'w') as csvfile:
+            filewriter = csv.DictWriter(csvfile, fieldnames=self.fieldNames)
+            filewriter.writeheader()
             for productDict in self.products:
-                if productDict != dict:
+                if type(productDict)!= dict:
                     continue
-                writer.writerow(productDict)
+                filewriter.writerow(productDict)
 
 if __name__ == "__main__":
     csvFileName = "productList.csv"
@@ -138,8 +141,6 @@ if __name__ == "__main__":
     for line in lines:
         parentCat,subCat,url = line.split("|||")
         print("Processing", url)
-        cnt+=1
-
-        if cnt < 8: continue
         webScraper.scrapeCategoryPage(parentCat,subCat,url)
-    webScraper.writeCSV()
+        break
+    #webScraper.writeCSV()
