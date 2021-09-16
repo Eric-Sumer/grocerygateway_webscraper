@@ -142,5 +142,3 @@ if __name__ == "__main__":
         parentCat,subCat,url = line.split("|||")
         print("Processing", url)
         webScraper.scrapeCategoryPage(parentCat,subCat,url)
-        break
-    #webScraper.writeCSV()
