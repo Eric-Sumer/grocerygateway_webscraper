@@ -138,7 +138,12 @@ if __name__ == "__main__":
     with open('webscrapePages.txt') as f:
         lines = f.readlines()
     cnt = 0
+    skip = 1
     for line in lines:
+        cnt+=1
+        if cnt <= skip: continue
+        
         parentCat,subCat,url = line.split("|||")
         print("Processing", url)
+
         webScraper.scrapeCategoryPage(parentCat,subCat,url)
