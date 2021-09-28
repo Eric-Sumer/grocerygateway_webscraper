@@ -14,7 +14,7 @@ class GeneralWebscraper:
         self.options.add_argument('--ignore-certificate-errors')
         self.options.add_argument("--test-type")
         self.driver = webdriver.Chrome(executable_path="./chromedriver",options=self.options)
-        self.timeout = 10
+        self.timeout = 15
         self.fieldNames = ['UPC', 'Product Name', 'Category', 'Subcategory', 'In Stock', 'Price', 'Sale', 'Sale Price', 'Unit', 'Image Link', 'Description', 'Product Page Link']
         self.products = []
         self.csvPath = './CsvFiles/'
@@ -48,24 +48,28 @@ class GeneralWebscraper:
             print("Continuing Run")
             return []
             
+    def formatUPC(self,upcText):
+        if type(upcText)!=str:
+            return ""
+        return ('0'*max(0,(12-len(upcText))))+upcText
 
     def scrapeProductPage(self,url, category, parentCategory):
         try:
             self.driver.get(url)
-            element_present = EC.presence_of_element_located((By.XPATH, "//img[@class='ng-tns-c404-0']"))
+            element_present = EC.visibility_of_element_located((By.XPATH, "//img[@class='ng-tns-c405-0']"))
             WebDriverWait(self.driver, self.timeout).until(element_present)
+        except TimeoutException:
+            print("Time out exception for link", url)
         except Exception as e:
             print("Error occured when getting product page url", url)
             print("Error is ", e)
             print("Continuing Run")
             return {}
-            
         try : 
             productPageLink = url
-            title = self.driver.find_element_by_xpath("//img[@class='ng-tns-c404-0']").get_attribute("alt").strip()
-            upc = self.driver.find_element_by_xpath("//p[@class='product-code ng-star-inserted']").get_attribute("textContent").split(":")[-1].strip()
-
-            imageUrl = self.driver.find_element_by_xpath("//img[@class='ng-tns-c404-0']").get_attribute("src").strip()
+            title = self.driver.find_element_by_xpath("//img[@class='ng-tns-c405-0']").get_attribute("alt").strip()
+            upc = self.formatUPC(self.driver.find_element_by_xpath("//p[@class='product-code ng-star-inserted']").get_attribute("textContent").split(":")[-1].strip())
+            imageUrl = self.driver.find_element_by_xpath("//img[@class='ng-tns-c405-0']").get_attribute("src").strip()
             unit = self.driver.find_element_by_xpath("//span[@class='measurement']").get_attribute("textContent")[1:].strip()
 
             #get product description
@@ -130,6 +134,8 @@ class GeneralWebscraper:
                 if type(productDict)!= dict:
                     continue
                 filewriter.writerow(productDict)
+    def clearProducts(self):
+        self.prodcuts = []
 
 if __name__ == "__main__":
     csvFileName = "productList.csv"
@@ -139,11 +145,12 @@ if __name__ == "__main__":
         lines = f.readlines()
     cnt = 0
     skip = 1
+    breakCnt = float('inf')
     for line in lines:
         cnt+=1
         if cnt <= skip: continue
-        
+        if cnt > breakCnt: break 
         parentCat,subCat,url = line.split("|||")
         print("Processing", url)
-
+        webScraper.clearProducts()
         webScraper.scrapeCategoryPage(parentCat,subCat,url)
