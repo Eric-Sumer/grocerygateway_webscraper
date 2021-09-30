@@ -53,7 +53,8 @@ class GeneralWebscraper:
     def formatUPC(self,upcText):
         if type(upcText)!=str:
             return ""
-        return ('0'*max(0,(12-len(upcText))))+upcText
+        lengthOfUPC = 14
+        return ('0'*max(0,(lengthOfUPC-len(upcText))))+upcText
 
     def scrapeProductPage(self,url, category, parentCategory):
         try:
