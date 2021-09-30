@@ -3,6 +3,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
+
 import math
 import time
 import csv
@@ -13,7 +15,7 @@ class GeneralWebscraper:
         self.options = webdriver.ChromeOptions()
         self.options.add_argument('--ignore-certificate-errors')
         self.options.add_argument("--test-type")
-        self.driver = webdriver.Chrome(executable_path="./chromedriver",options=self.options)
+        self.driver = webdriver.Chrome(ChromeDriverManager().install())
         self.timeout = 15
         self.fieldNames = ['UPC', 'Product Name', 'Category', 'Subcategory', 'In Stock', 'Price', 'Sale', 'Sale Price', 'Unit', 'Image Link', 'Description', 'Product Page Link']
         self.products = []
