@@ -165,7 +165,7 @@ if __name__ == "__main__":
     with open('webscrapePages.txt') as f:
         lines = f.readlines()
     cnt = 0
-    skip = 5
+    skip = float('-inf')
     breakCnt = float('inf')
     for line in lines:
         if cnt < skip: 
