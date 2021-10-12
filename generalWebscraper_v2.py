@@ -6,7 +6,6 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 
 import requests
-import math
 import time
 import csv
 import os
@@ -28,13 +27,9 @@ class GeneralWebscraper:
 
     def loadCategoryPage(self, url):
         #function loads the category page into the correct place and gets the list of product box elements
-        try:
-            self.driver.get(url)
-            element_present = EC.presence_of_element_located((By.XPATH, "//div[@class='d-flex d-xl-none filters-items-counter']"))
-            WebDriverWait(self.driver, self.timeout).until(element_present)
-        except TimeoutException:
-            print ("Timed out waiting for page to load")
-            return []
+        self.driver.get(url)
+        time.sleep(5)
+
         try: 
             #get product boxes
             while self.driver.find_elements_by_xpath("//button[@class='btn-black']"):
@@ -170,7 +165,7 @@ if __name__ == "__main__":
     with open('webscrapePages.txt') as f:
         lines = f.readlines()
     cnt = 0
-    skip = 1
+    skip = 5
     breakCnt = float('inf')
     for line in lines:
         if cnt < skip: 
